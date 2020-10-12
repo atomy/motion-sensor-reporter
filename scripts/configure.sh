@@ -17,15 +17,15 @@ if [ -z "${DISCORD_WEBHOOK_URL}" ] ; then
   exit 1
 fi
 
-rm -f scripts/build.sh
+rm -f scripts/buildApp.sh
 rm -f scripts/push.sh
 rm -f docker-compose.yml
 
 cp docker-compose.yml.dist docker-compose.yml
 sed -i "s|xxx.dkr.ecr.eu-central-1.amazonaws.com|${ECR_PREFIX}|" docker-compose.yml
 
-cp scripts/build.sh.dist scripts/build.sh
-sed -i "s|xxx.dkr.ecr.eu-central-1.amazonaws.com|${ECR_PREFIX}|" scripts/build.sh
+cp scripts/buildApp.sh.dist scripts/buildApp.sh
+sed -i "s|xxx.dkr.ecr.eu-central-1.amazonaws.com|${ECR_PREFIX}|" scripts/buildApp.sh
 
 cp scripts/push.sh.dist scripts/push.sh
 sed -i "s|xxx.dkr.ecr.eu-central-1.amazonaws.com|${ECR_PREFIX}|" scripts/push.sh

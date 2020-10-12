@@ -2,6 +2,6 @@
 
 set -e
 
-docker build -f scripts/docker/Dockerfile -t atomy/motion-sensor-reporter:latest .
+docker build -f scripts/docker/bundle/Dockerfile -t atomy/motion-sensor-reporter:latest .
 
 docker tag atomy/motion-sensor-reporter:latest xxx.dkr.ecr.eu-central-1.amazonaws.com/atomy/motion-sensor-reporter:latest

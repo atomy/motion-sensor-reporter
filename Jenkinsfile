@@ -24,7 +24,7 @@ pipeline {
                 }
 
                 echo 'Building...'
-                sh './scripts/build.sh'
+                sh './scripts/buildApp.sh'
                 echo 'Building...DONE'
             }
         }
