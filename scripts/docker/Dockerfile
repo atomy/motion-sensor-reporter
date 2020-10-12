@@ -9,4 +9,6 @@ RUN mkdir -p /app
 
 ADD movement.py /app/movement.py
 
+WORKDIR /app
+
 CMD [ "python", "movement.py" ]
