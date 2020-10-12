@@ -1,0 +1,6 @@
+version: "3"
+
+services:
+  motion:
+    image: xxx.dkr.ecr.eu-central-1.amazonaws.com/atomy/motion-sensor-reporter:latest
+    restart: always

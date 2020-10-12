@@ -1,0 +1,4 @@
+push.sh
+build.sh
+buildAmd64.sh
+notification.sh
