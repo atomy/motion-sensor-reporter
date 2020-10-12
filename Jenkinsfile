@@ -4,7 +4,7 @@ pipeline {
     }
 
     environment {
-        APP_NAME = 'iot-discord-bot'
+        APP_NAME = 'motion-sensor-reporter'
     }
 
     stages {
