@@ -3,7 +3,7 @@ import time
 from datetime import datetime
 
 now = datetime.now()
-dateTime = now.strftime("%d-%m-%Y %H:%M:%S")
+dateTime = now.strftime("%Y-%m-%d %H:%M:%S")
 print("[{}] Starting up...".format(dateTime))
 
 GPIO.setmode(GPIO.BCM)
@@ -16,15 +16,15 @@ try:
     motion = False
 
     now = datetime.now()
-    dateTime = now.strftime("%d-%m-%Y %H:%M:%S")
+    dateTime = now.strftime("%Y-%m-%d %H:%M:%S")
     print("[{}] Entering endless-loop...".format(dateTime))
 
     while True:
         now = datetime.now()
-        dateTime = now.strftime("%d-%m-%Y %H:%M:%S")
+        dateTime = now.strftime("%Y-%m-%d %H:%M:%S")
 
         if GPIO.input(23):
-            if False == motion:
+            if not motion:
                 motion = True
                 print("[{}] Motion (first) Detected...".format(dateTime))
         else:
@@ -35,7 +35,7 @@ try:
 
 except Exception as e:
     now = datetime.now()
-    dateTime = now.strftime("%d-%m-%Y %H:%M:%S")
+    dateTime = now.strftime("%Y-%m-%d %H:%M:%S")
     print("[{}] Exception! Exiting...".format(dateTime))
     print(e)
     GPIO.cleanup()
