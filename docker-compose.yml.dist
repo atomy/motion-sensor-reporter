@@ -8,3 +8,4 @@ services:
       - "/dev/gpiomem"
     volumes:
       - "./hostname:/app/hostname"
+      - "./current_version:/app/current_version"
