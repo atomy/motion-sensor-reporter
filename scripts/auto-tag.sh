@@ -39,3 +39,5 @@ echo ${CHANGES} | sed ':a;N;$!ba;s/\n/\\\n/g' > changes
 sed -i "s|<discord-webhoook-url>|${DISCORD_WEBHOOK_URL}|" scripts/notification.sh
 sed -i "s|<new-version>|${NEW_TAG}|" scripts/notification.sh
 sed -i "s|<current-version>|${VERSION}|" scripts/notification.sh
+
+echo $NEW_TAG > current_version
