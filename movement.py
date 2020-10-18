@@ -8,7 +8,7 @@ class event:
     def __init__(self, hostname="unknown", version="0.0.0"):
         self.action = "motion"
         self.hostname = hostname
-        self.timestamp = int(time.time())
+        self.timestamp = int(time.time()) * 1000
         self.emitter_version = version
 
 now = datetime.now()
